@@ -7,7 +7,7 @@ function App() {
   const { onCopy, setValue, hasCopied } = useClipboard('')
 
   const removeLines = (text: string) => {
-    return text.replace(/(\r\n|\n|\r)/gm, '')
+    return text.replace(/(\r\n|\n|\r)/gm, ' ')
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {

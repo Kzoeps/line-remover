@@ -24,7 +24,7 @@ function App() {
         <Flex direction={"column"} gap={5}>
           <Textarea onChange={handleChange} value={original} rows={8} />
           <Button variant={'outline'} colorScheme='blue' onClick={() => setOriginal('')}>Reset</Button>
-          <Textarea onChange={handleChange} value={removeLines(original)} rows={8} />
+          <Textarea onChange={handleChange} value={removeLines(original).toLowerCase()} rows={8} />
           <Button variant={'outline'} colorScheme='blue' onClick={onCopy}>{hasCopied ? 'Copied' : 'Copy'}</Button>
         </Flex>
       </ChakraProvider>
